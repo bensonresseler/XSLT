@@ -1,51 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-    <xsl:output method="html" doctype-system="about:legacy-compat" encoding="UTF-8"/>
-    <xsl:template match="/klanten">
+    <xsl:output method="html" doctype-system="about:legacy-compat" encoding="UTF-8" />
+    <xsl:template match="/personen">
         <html>
-            <head></head>
+            <head>
+                <title>K3</title>
+            </head>
             <body>
-                <xsl:element name="table">
-                    <xsl:attribute name="style">border-with:medium;border-style:double</xsl:attribute>
-                    <tr>
-                        <th>
-                            <xsl:text>Provincie</xsl:text>
-                        </th>
-                        <th>
-                            <xsl:text>Naam</xsl:text>
-                        </th>
-                        <th>
-                            <xsl:text>Bedrag</xsl:text>
-                        </th>
-                    </tr>
-                    <xsl:apply-templates>
-                        <xsl:sort select="@provincie" order="ascending" />
-                    </xsl:apply-templates>
-                    <tr>
-                        <td></td><td>Totaal: </td>
-                        <td>
-                            <xsl:value-of select="sum(klant/bedrag)" />
-                        </td>
-                    </tr>
-                </xsl:element>
+                <xsl:apply-templates />
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="text()"/>
-    <xsl:template match="klant">
-        <xsl:element name="tr">
-            <xsl:if test="bedrag &gt; 1000">
-            <xsl:attribute name="style">color:red</xsl:attribute>
-            </xsl:if>
-            <td>
-                <xsl:value-of select="@provincie"/>
-            </td>
-            <td>
-                <xsl:value-of select="naam"/>
-            </td>
-            <td>
-                <xsl:value-of select="bedrag"/>
-            </td>
-        </xsl:element>
+    <xsl:template match="naam">
+        <div>
+            <xsl:value-of select="."/>
+            <xsl:element name="img">
+                <xsl:attribute name="src"><xsl:value-of select="@figuur"></xsl:value-of></xsl:attribute>
+                <xsl:attribute name="style">width:100px</xsl:attribute>
+            </xsl:element>
+        </div>
     </xsl:template>
 </xsl:transform>
