@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
+<klanten>
+    <klant provincie="ANTW">
+        <naam>Jansen</naam> <bedrag>1000.25</bedrag>
+    </klant>
+    <klant provincie="LIMB">
+        <naam>Pieters</naam> <bedrag>2000.33</bedrag>
+    </klant>
+    <klant provincie="ANTW">
+        <naam>Jorissen</naam> <bedrag>500.56</bedrag>
+    </klant>
+    <klant provincie="VLBR">
+        <naam>Cornelissen</naam> <bedrag>3000.75</bedrag>
+    </klant>
+    <klant provincie="OOVL">
+        <naam>Vermeulen</naam> <bedrag>2000.60</bedrag>
+    </klant>
+</klanten>
