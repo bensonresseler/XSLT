@@ -27,7 +27,10 @@
     </xsl:template>
     <xsl:template match="text()"/>
     <xsl:template match="klant">
-        <tr>
+        <xsl:element name="tr">
+            <xsl:if test="bedrag &gt; 1000">
+            <xsl:attribute name="style">color:red</xsl:attribute>
+            </xsl:if>
             <td>
                 <xsl:value-of select="@provincie"/>
             </td>
@@ -37,6 +40,6 @@
             <td>
                 <xsl:value-of select="bedrag"/>
             </td>
-        </tr>
+        </xsl:element>
     </xsl:template>
 </xsl:transform>
