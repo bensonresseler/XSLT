@@ -21,6 +21,12 @@
                     <xsl:apply-templates>
                         <xsl:sort select="@provincie" order="ascending" />
                     </xsl:apply-templates>
+                    <tr>
+                        <td></td><td>Totaal: </td>
+                        <td>
+                            <xsl:value-of select="sum(klant/bedrag)" />
+                        </td>
+                    </tr>
                 </xsl:element>
             </body>
         </html>
