@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
+<boeken>
+    <boek categorie="fictie">
+        <auteur>Gabriel Garcia Marquez</auteur>
+        <titel>Honderd jaar eenzaamheid</titel>
+        <prijs>12.50</prijs>
+        <uitgiftejaar>1972</uitgiftejaar>
+        <ISBN>9029078448</ISBN>
+    </boek>
+    <boek categorie="fictie">
+        <auteur>Multatuli</auteur>
+        <titel>Max Havelaar</titel>
+        <prijs>10.95</prijs>
+        <uitgiftejaar>2002</uitgiftejaar>
+        <ISBN>9789025334130</ISBN>
+    </boek>
+    <boek categorie="non-fictie">
+        <auteur>Sam Ferguson</auteur>
+        <titel>Professional XML</titel>
+        <prijs>43.90</prijs>
+        <uitgiftejaar>2007</uitgiftejaar>
+        <ISBN>9780471777779</ISBN>
+    </boek>
+</boeken>
